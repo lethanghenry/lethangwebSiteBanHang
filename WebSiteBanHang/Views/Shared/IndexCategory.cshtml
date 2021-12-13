@@ -1,0 +1,57 @@
+﻿@model IEnumerable<WebSiteBanHang.Models.Category>
+
+<div class="row">
+
+        <div class="card">
+            <div class="card-header">
+                <h3>Category</h3>
+            </div>
+            <div class="card-body">
+
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayName("name")
+                        </th>
+                        <th>
+                            @Html.Label("Edit")
+                        </th>
+                        <th>
+                            @Html.Label("Delete")
+                        </th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.nameCategory)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.idCategory }, new { @class = "btn btn-outline-primary" })
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "Delete2", new { id = item.idCategory }, new { @OnClick = "remove()", @class = "btn btn-outline-danger " })
+                            </td>
+                        </tr>
+                    }
+                </table>
+
+            </div>
+        </div>
+</div>
+<script>
+    function remove() {
+
+        var isConfirm = confirm('Are sure wants to delete?');
+        if (isConfirm == true) {
+            return true;
+        }
+        else {
+            event.preventDefault();
+        }
+        return false;
+
+    }
+</script>
+
