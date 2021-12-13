@@ -2,13 +2,23 @@
 
 <div class="row">
 
-        <div class="card">
-            <div class="card-header">
-                <h3>Category</h3>
-            </div>
-            <div class="card-body">
+    <div class="card card-success">
+        <div class="card-header">
+            <h3 class="card-title">Category</h3>
 
-                <table class="table">
+            <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                    <i class="fas fa-minus"></i>
+                </button>
+                <button type="button" class="btn btn-tool" data-card-widget="remove">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+        <div class="card-body">
+
+            <table class="table table-head-fixed text-nowrap">
+                <thead>
                     <tr>
                         <th>
                             @Html.DisplayName("name")
@@ -20,7 +30,8 @@
                             @Html.Label("Delete")
                         </th>
                     </tr>
-
+                </thead>
+                <tbody>
                     @foreach (var item in Model)
                     {
                         <tr>
@@ -35,10 +46,24 @@
                             </td>
                         </tr>
                     }
-                </table>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>
+                            @Html.DisplayName("name")
+                        </th>
+                        <th>
+                            @Html.Label("Edit")
+                        </th>
+                        <th>
+                            @Html.Label("Delete")
+                        </th>
+                    </tr>
+                </tfoot>
+            </table>
 
-            </div>
         </div>
+    </div>
 </div>
 <script>
     function remove() {

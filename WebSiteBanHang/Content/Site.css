@@ -19,21 +19,27 @@ select,
 textarea {
     width: 100%;
 }
+
 body {
     font-family: sans-serif;
     font-size: 15px;
     background: #CCCCCC;
 }
-.menu ul li:hover
- {
-     background:#3399ff;
- }
 
- ul li:hover  ul {
+.menu ul li:hover {
+    background: #3399ff;
+    color: white;
+}
+.menu ul li a:hover {
+    background: #3399ff;
+    color: white;
+}
+
+ul li:hover ul {
     display: block;
 }
 
- .menu2 {
+.menu2 {
     background: white;
     list-style-type: none;
     text-align: left;
@@ -41,6 +47,7 @@ body {
     width: 100%;
     display: none;
 }
+
 .menu3 {
     background: white;
     list-style-type: none;
@@ -49,6 +56,7 @@ body {
     width: 100%;
     display: none;
 }
+
 .menu4 {
     background: white;
     list-style-type: none;
@@ -57,21 +65,22 @@ body {
     width: 100%;
     display: none;
 }
-.menu ul li
-{
-    list-style:none;
+
+.menu ul li {
+    list-style: none;
 }
+
 .card {
-margin:20px;
+    margin: 20px;
 }
 
 .menu ul li a {
-        text-decoration: none;
-        color: #333;
-        font-weight: bold;
-        display: block;
-        padding: 20px;
-    }
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    display: block;
+    padding: 20px;
+}
 
 
 .menu {

@@ -11,9 +11,18 @@
     @Html.AntiForgeryToken()
 
     <div class="row">
-            <div class="card">
+            <div class="card card-success">
                 <div class="card-header">
-                    <h3> Edit Category</h3>
+                    <h3 class="card-title">Edit Category</h3>
+
+                    <div class="card-tools">
+                        <button type="button" class="btn btn-tool" data-card-widget="collapse">
+                            <i class="fas fa-minus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-card-widget="remove">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
                 </div>
                 <div class="card-body">
                     <div class="form-horizontal">
@@ -30,7 +39,7 @@
 
                         <div class="form-group">
                             <div class="d-flex justify-content-center align-items-center">
-                                <input type="submit" value="Save" class="btn btn-primary" />
+                                <input type="submit" value="Save" class="btn btn-success" />
                             </div>
                         </div>
                     </div>
